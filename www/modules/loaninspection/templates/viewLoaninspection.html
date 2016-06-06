@@ -1,0 +1,313 @@
+<ion-view view-title="查看贷后检查表">
+    <ion-content class="background-fixed section-background">
+
+        <div class="list padding">
+
+
+            <div class="item item-divider">
+                检查说明
+            </div>
+
+            <div class="row row-stretch  responsive-sm row-no-padding">
+                <div class="col col-33">
+                    <label class="item item-input">
+                        <div class="input-label input-label-small">
+                            检查日期：
+                        </div>
+                        <span class="item-text-wrap" ng-bind="loanCheckReportInfo.check_dt"></span>
+                    </label>
+                </div>
+                <div class="col col-33">
+                    <label class="item item-input ">
+                        <span class="input-label input-label-small">生成日期：</span>
+                        <span class="item-text-wrap" ng-bind="loanCheckReportInfo.create_dt"></span>
+                    </label>
+                </div>
+                <div class="col col-33">
+                    <label class="item item-input ">
+                        <span class="input-label input-label-small">发放日期：</span>
+                        <span class="item-text-wrap" ng-bind="loanCheckReportInfo.loan_begin_date"></span>
+                    </label>
+                </div>
+            </div>
+
+
+            <div class="row row-stretch responsive-sm row-no-padding">
+                <div class="col col-50">
+                    <label class="item item-input">
+                        <span class="input-label input-label-small">
+                            类别：
+                        </span>
+                        <span ng-bind="loanCheckReportInfo.report_type_nm"></span>
+                    </label>
+                </div>
+                <div class="col col-50">
+                    <label class="item item-input ">
+                        <span class="input-label input-label-small">期次：</span>
+                        <span ng-bind="loanCheckReportInfo.now_term"></span>次
+                    </label>
+                </div>
+            </div>
+
+            <div class="item item-input input-label-small">
+                <span class="input-label">检查规则说明：</span>
+                <span class="item-text-wrap" ng-bind="loanCheckReportInfo.rule_spec"></span>
+            </div>
+        </div>
+
+        <div class="list padding">
+
+
+            <div class="item item-divider">
+                贷款信息基本情况
+            </div>
+
+            <div class="row row-stretch  responsive-sm row-no-padding">
+                <div class="col col-50">
+                    <label class="item item-input">
+                        <div class="input-label input-label-small">
+                            客户姓名：
+                        </div>
+                        <span class="item-text-wrap" ng-bind="loanCheckReportInfo.cus_name"></span>
+                    </label>
+                </div>
+                <div class="col col-50">
+                    <label class="item item-input ">
+                        <span class="input-label input-label-small">贷款金额：</span>
+                        <span class="item-text-wrap"
+                              ng-bind="loanCheckReportInfo.loan_contract_amount|currency:''"></span>
+                    </label>
+                </div>
+            </div>
+
+
+            <div class="row row-stretch responsive-sm row-no-padding">
+                <div class="col col-50">
+                    <label class="item item-input">
+                        <div class="input-label input-label-small">
+                            贷款品种：
+                        </div>
+                        <span ng-bind="loanCheckReportInfo.app_op_name"></span>
+                    </label>
+                </div>
+                <div class="col col-50">
+
+                    <label class="item item-input item-select">
+                        <div class="input-label">
+                            检查方式：
+                        </div>
+                        <span ng-if="loanCheckReportInfo.check_way=='1'">家庭住所</span>
+                        <span ng-if="loanCheckReportInfo.check_way=='2'">生产经营场所</span>
+                        <span ng-if="loanCheckReportInfo.check_way=='3'">电话回访</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="item item-input input-label-small">
+                <span class="input-label">合同约定用途：</span>
+                <span class="item-text-wrap" ng-bind="loanCheckReportInfo.loan_use_name"></span>
+            </div>
+
+            <div class="item item-input input-label-small ">
+                <span class="input-label">
+                    贷款实际用途与明细：
+                    <div class="assertive">(首次贷后检查填写)</div>
+                </span>
+                <div style="width: 100%;">
+                    <div class="item-text-wrap" ng-bind="loanCheckReportInfo.loan_actual_user1"
+                         style="margin: 10px;"></div>
+                    <div class="item-text-wrap" ng-bind="loanCheckReportInfo.loan_actual_user2"
+                         style="margin: 10px;"></div>
+                    <div class="item-text-wrap" ng-bind="loanCheckReportInfo.loan_actual_user3"
+                         style="margin: 10px;"></div>
+                    <div class="item-text-wrap" ng-bind="loanCheckReportInfo.loan_actual_user4"
+                         style="margin: 10px;"></div>
+
+
+                </div>
+            </div>
+
+            <div class="item item-input input-label-small">
+                <span class="input-label">
+                    征信状况及变化：
+                </span>
+                <div class="item-text-wrap" ng-bind="loanCheckReportInfo.credit_status_describe"
+                     style="margin: 10px;"></div>
+
+            </div>
+
+
+            <label class="item item-input" ng-show="loanCheckReportInfo.overdue_flag=='1'">
+                <div class="input-label input-label-small">
+                    是否发生逾期：
+                </div>
+                <span class="item-text-wrap">否</span>
+            </label>
+
+
+            <div class="row row-stretch  responsive-sm row-no-padding" ng-show="loanCheckReportInfo.overdue_flag=='0'">
+
+                <div class="col col-33">
+                    <label class="item item-input">
+                        <div class="input-label input-label-small">
+                            是否发生逾期：
+                        </div>
+                        <span class="item-text-wrap">是</span>
+                    </label>
+                </div>
+                <div class="col col-33">
+                    <label class="item item-input ">
+                        <span class="input-label input-label-small">逾期金额：</span>
+                        <span class="item-text-wrap" ng-bind="loanCheckReportInfo.overdue_amount|currency:''"></span>
+                    </label>
+                </div>
+                <div class="col col-33">
+                    <label class="item item-input ">
+                        <span class="input-label input-label-small">逾期天数：</span>
+                        <span class="item-text-wrap" ng-bind="loanCheckReportInfo.overdue_day"></span>天
+                    </label>
+                </div>
+            </div>
+
+            <label ng-show="loanCheckReportInfo.overdue_flag==0" class="item item-input ">
+                <span class="input-label input-label-small">逾期原因：</span>
+                <div class="item-text-wrap" ng-bind="loanCheckReportInfo.overdue_reason"
+                     style="margin: 10px;"></div>
+            </label>
+
+        </div>
+
+        <div class="list padding" ng-show="loanCheckReportInfo.itemList.length>0">
+
+
+            <div class="item item-divider">
+                检查内容
+            </div>
+
+
+            <label class="item item-input input-label-small" ng-repeat="checkItem in loanCheckReportInfo.itemList">
+                <span class="input-label" ng-bind="checkItem.check_title+'：'"></span>
+                <div class="item-text-wrap" ng-bind="loanCheckReportInfo.context"
+                     style="margin: 10px;"></div>
+
+            </label>
+
+        </div>
+
+        <div class="list padding">
+
+
+            <div class="item item-divider">
+                检查结论及处理措施
+            </div>
+
+
+            <label class="item item-input input-label-small">
+                <span class="input-label">
+                    检查结论：
+                </span>
+                <div class="item-text-wrap" ng-bind="loanCheckReportInfo.check_result"
+                     style="margin: 10px;"></div>
+
+            </label>
+
+            <label class="item item-input input-label-small">
+                <span class="input-label">
+                    采取措施：
+                    <div class="assertive">(若无异常,则不需填写)</div>
+                </span>
+
+                <div class="item-text-wrap" ng-bind="loanCheckReportInfo.specific_measure"
+                     style="margin: 10px;"></div>
+
+            </label>
+
+            <label class="item item-input input-label-small">
+                <span class="input-label">
+                    其他需要说明的问题：
+                </span>
+
+                <div class="item-text-wrap" ng-bind="loanCheckReportInfo.other_question"
+                     style="margin: 10px;"></div>
+
+            </label>
+
+
+            <div class="row row-stretch  responsive-sm row-no-padding">
+                <div class="col col-50">
+                    <label class="item item-input">
+                        <div class="input-label input-label-small">
+                            检查人员：
+                        </div>
+                        <span class="item-text-wrap" ng-bind="loanCheckReportInfo.user_name"></span>
+                    </label>
+                </div>
+                <div class="col col-50">
+                    <label class="item item-input ">
+                        <span class="input-label input-label-small">打印日期：</span>
+                        <span class="item-text-wrap" ng-bind="loanCheckReportInfo.check_dt"></span>
+                    </label>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="list padding">
+            <div class="item item-icon-right" style="background-color: #f5f5f5;">
+                照片
+                <span class="badge badge-calm" ng-bind="loanCheckReportInfo.pictureType.length"></span>
+            </div>
+            <a ng-repeat="picture in loanCheckReportInfo.pictureType" ng-click="openMedia('IMAGE',picture)"
+               class="item item-light item-thumbnail-left item-icon-right">
+                <img ng-src="{{picture.fullPath}}">
+                <h2 ng-bind="picture.name"></h2>
+                <p>
+                    <span ng-bind="picture.lastModifiedDate|date:'yyyy-MM-dd HH:mm:ss'"></span>
+                </p>
+                <p><span ng-bind="picture.size/1024/1024|currency:''"></span>MB</p>
+
+                <i class="icon ion-chevron-right icon-accessory"></i>
+            </a>
+        </div>
+
+        <div class="list padding">
+            <div class="item item-icon-right" style="background-color: #f5f5f5;">
+                录像
+                <span class="badge badge-calm" ng-bind="loanCheckReportInfo.videoType.length"></span>
+            </div>
+            <a ng-repeat="video in loanCheckReportInfo.videoType" ng-click="openMedia('VIDEO',video)"
+               class="item item-light item-thumbnail-left item-icon-right">
+                <img src="img/icon/video.png">
+                <h2 ng-bind="video.name"></h2>
+                <p>
+                    <span ng-bind="video.lastModifiedDate|date:'yyyy-MM-dd HH:mm:ss'"></span>
+                </p>
+                <p><span ng-bind="video.size/1024/1024|currency:''"></span>MB</p>
+
+                <i class="icon ion-chevron-right icon-accessory"></i>
+            </a>
+        </div>
+
+        <div class="list padding">
+            <div class="item item-icon-right" style="background-color: #f5f5f5;">
+                录音
+                <span class="badge badge-calm" ng-bind="loanCheckReportInfo.audioType.length"></span>
+            </div>
+            <a ng-repeat="audio in loanCheckReportInfo.audioType" ng-click="openMedia('AUDIO',audio)"
+               class="item item-light item-thumbnail-left item-icon-right">
+                <img src="img/icon/audio.png">
+                <h2 ng-bind="audio.name"></h2>
+                <p>
+                    <span ng-bind="audio.lastModifiedDate|date:'yyyy-MM-dd HH:mm:ss'"></span>
+                </p>
+                <p>
+                    <span ng-bind="audio.size/1024/1024|currency:''"></span>MB
+                </p>
+
+                <i class="icon ion-chevron-right icon-accessory"></i>
+            </a>
+        </div>
+
+
+    </ion-content>
+</ion-view>

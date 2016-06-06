@@ -1,0 +1,64 @@
+<div class="list card">
+  <div class="item item-divider">
+    <div class="row row-center row-no-padding">
+      <div class="col col-50 text-left">
+        <span>额度信息:&nbsp;</span>
+        <span ng-bind="customerCreditInfo['额度起期']"></span>
+        -
+        <span ng-bind="customerCreditInfo['额度止期']"></span>
+      </div>
+      <div class="col col-50 text-right">
+        <span></span>
+      </div>
+    </div>
+  </div>
+  <div class="item item-light item-body">
+    <div class="row row-center row-no-padding">
+      <table cellpadding="0" cellspacing="0" class="grid-stable" style="width:100% ;">
+        <tr>
+          <td class="grid-stable-td">
+            <table style="width: 100%;">
+              <tr>
+                <td width="100" class="grid-stable-right-td center">额度编号</td>
+                <td width="240" class="grid-stable-right-td center" ng-bind="customerCreditInfo['额度编号']">&nbsp;</td>
+                <td width="120" class="grid-stable-right-td center">额度状态</td>
+                <td width="200" class="grid-stable-right-td center" ng-bind="customerCreditInfo['额度状态']" >&nbsp;</td>
+                <td width="100" class="grid-stable-right-td center">额度种类</td>
+                <td >&nbsp;
+                  <span ng-bind="customerCreditInfo['额度种类']"></span>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td class="grid-stable-td">
+            <table>
+              <tr>
+                <td width="100" class="grid-stable-right-td center">额度起期</td>
+                <td width="140" class="grid-stable-right-td center" ng-bind="customerCreditInfo['额度起期']">&nbsp;</td>
+                <td width="100" class="grid-stable-right-td center">额度止期</td>
+                <td width="120" class="grid-stable-right-td center" ng-bind="customerCreditInfo['额度止期']">&nbsp;</td>
+                <td width="100" class="grid-stable-right-td center">额度金额</td>
+                <td width="100" class="grid-stable-right-td center" ng-bind="customerCreditInfo['额度金额']">&nbsp;</td>
+                <td width="100" class="grid-stable-right-td center">额度余额</td>
+                <td>&nbsp;<span ng-bind="customerCreditInfo['额度余额']"></span></td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td class="grid-stable-td">
+            <table>
+              <tr>
+                <td width="100" class="grid-stable-right-td center">是否虚拟额度</td>
+                <td>&nbsp;<span ng-bind="customerCreditInfo['是否虚拟额度']"></span></td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
+

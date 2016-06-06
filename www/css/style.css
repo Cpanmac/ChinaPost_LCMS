@@ -1,0 +1,216 @@
+/* Empty. Add your own CSS if you like */
+
+/* slide-in-right */
+.slide-in-right {
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+}
+
+.slide-in-right.ng-enter,
+.slide-in-right > .ng-enter {
+    -webkit-transition: all cubic-bezier(0.1, 0.7, 0.1, 1) 400ms;
+    transition: all cubic-bezier(0.1, 0.7, 0.1, 1) 400ms;
+}
+
+.slide-in-right.ng-enter-active,
+.slide-in-right > .ng-enter-active {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+.slide-in-right.ng-leave,
+.slide-in-right > .ng-leave {
+    -webkit-transition: all ease-in-out 250ms;
+    transition: all ease-in-out 250ms;
+}
+
+/* slide-in-left */
+.slide-in-left {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+}
+
+.slide-in-left.ng-enter,
+.slide-in-left > .ng-enter {
+    -webkit-transition: all cubic-bezier(0.1, 0.7, 0.1, 1) 400ms;
+    transition: all cubic-bezier(0.1, 0.7, 0.1, 1) 400ms;
+}
+
+.slide-in-left.ng-enter-active,
+.slide-in-left > .ng-enter-active {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+.slide-in-left.ng-leave,
+.slide-in-left > .ng-leave {
+    -webkit-transition: all ease-in-out 250ms;
+    transition: all ease-in-out 250ms;
+}
+
+/* slide-in-down */
+.slide-in-down {
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+}
+
+.slide-in-down.ng-enter,
+.slide-in-down > .ng-enter {
+    -webkit-transition: all cubic-bezier(0.1, 0.7, 0.1, 1) 400ms;
+    transition: all cubic-bezier(0.1, 0.7, 0.1, 1) 400ms;
+}
+
+.slide-in-down.ng-enter-active,
+.slide-in-down > .ng-enter-active {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+.slide-in-down.ng-leave,
+.slide-in-down > .ng-leave {
+    -webkit-transition: all ease-in-out 250ms;
+    transition: all ease-in-out 250ms;
+}
+
+/* input-label */
+.input-label {
+    width: 25%;
+}
+
+/* modal screen */
+@media (min-width: 680px) {
+    .modal.right-screen {
+        width: auto;
+        height: auto;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 66%;
+    }
+
+    .modal.left-screen {
+        width: auto;
+        height: auto;
+        top: 0;
+        bottom: 0;
+        right: 66%;
+        left: 0;
+    }
+
+    .modal.top-screen {
+        width: auto;
+        height: auto;
+        top: 0;
+        bottom: 66%;
+        right: 0;
+        left: 0;
+    }
+
+    .modal.bottom-screen {
+        width: auto;
+        height: auto;
+        top: 66%;
+        bottom: 0;
+        right: 0;
+        left: 0;
+    }
+
+    .modal.full-screen {
+        width: auto;
+        height: auto;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+    }
+}
+
+/** 输入错误提示 **/
+input.ng-invalid:not(:focus):not(.ng-untouched):not(:disabled):not(:read-only),
+textarea.ng-invalid:not(:focus):not(.ng-untouched):not(:disabled):not(:read-only) {
+    color: #ef473a;
+
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+
+    -webkit-animation-name: ng-invalid-keyframes;
+    animation-name: ng-invalid-keyframes;
+}
+
+input.ng-invalid:not(:focus):not(.ng-untouched):not(:disabled):not(:read-only)::-moz-placeholder,
+textarea.ng-invalid:not(:focus):not(.ng-untouched):not(:disabled):not(:read-only)::-moz-placeholder {
+    color: #ef473a;
+    -moz-transition: color 618ms;
+}
+
+input.ng-invalid:not(:focus):not(.ng-untouched):not(:disabled):not(:read-only):-ms-input-placeholder,
+textarea.ng-invalid:not(:focus):not(.ng-untouched):not(:disabled):not(:read-only):-ms-input-placeholder {
+    color: #ef473a;
+    -ms-transition: color 618ms;
+}
+
+input.ng-invalid:not(:focus):not(.ng-untouched):not(:disabled):not(:read-only)::-webkit-input-placeholder,
+textarea.ng-invalid:not(:focus):not(.ng-untouched):not(:disabled):not(:read-only)::-webkit-input-placeholder {
+    color: #ef473a;
+    text-indent: 0;
+    -webkit-transition: color 618ms;
+}
+
+@-webkit-keyframes ng-invalid-keyframes {
+    from, to {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+
+    10%, 30%, 50%, 70%, 90% {
+        -webkit-transform: translate3d(-10px, 0, 0);
+        transform: translate3d(-10px, 0, 0);
+    }
+
+    20%, 40%, 60%, 80% {
+        -webkit-transform: translate3d(10px, 0, 0);
+        transform: translate3d(10px, 0, 0);
+    }
+}
+
+@keyframes ng-invalid-keyframes {
+    from, to {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+
+    10%, 30%, 50%, 70%, 90% {
+        -webkit-transform: translate3d(-10px, 0, 0);
+        transform: translate3d(-10px, 0, 0);
+    }
+
+    20%, 40%, 60%, 80% {
+        -webkit-transform: translate3d(10px, 0, 0);
+        transform: translate3d(10px, 0, 0);
+    }
+}
+
+.input-label.input-label-small {
+    width: 25%;
+}
+
+.section-background {
+    background-image: url("../img/background/section-background.png");
+}
+
+.background-fixed {
+    background-attachment: fixed;
+}
+
+.section-background-grid {
+
+    background-image: -o-linear-gradient(0deg, transparent 0%, transparent 45%, rgba(0, 0, 0, .05) 45%, rgba(0, 0, 0, .05) 55%, transparent 55%, transparent 100%), linear-gradient(90deg, transparent 0%, transparent 45%, rgba(0, 0, 0, .05) 45%, rgba(0, 0, 0, .05) 55%, transparent 55%, transparent 100%);
+    background-image: -moz-linear-gradient(0deg, transparent 0%, transparent 45%, rgba(0, 0, 0, .05) 45%, rgba(0, 0, 0, .05) 55%, transparent 55%, transparent 100%), linear-gradient(90deg, transparent 0%, transparent 45%, rgba(0, 0, 0, .05) 45%, rgba(0, 0, 0, .05) 55%, transparent 55%, transparent 100%);
+    background-image: -webkit-linear-gradient(0deg, transparent 0%, transparent 45%, rgba(0, 0, 0, .05) 45%, rgba(0, 0, 0, .05) 55%, transparent 55%, transparent 100%), linear-gradient(90deg, transparent 0%, transparent 45%, rgba(0, 0, 0, .05) 45%, rgba(0, 0, 0, .05) 55%, transparent 55%, transparent 100%);
+    background-image: linear-gradient(0deg, transparent 0%, transparent 45%, rgba(0, 0, 0, .05) 45%, rgba(0, 0, 0, .05) 55%, transparent 55%, transparent 100%), linear-gradient(90deg, transparent 0%, transparent 45%, rgba(0, 0, 0, .05) 45%, rgba(0, 0, 0, .05) 55%, transparent 55%, transparent 100%);
+    -webkit-background-size: 15px 15px, 15px 15px;
+    background-size: 15px 15px, 15px 15px;
+    background-repeat: repeat;
+}

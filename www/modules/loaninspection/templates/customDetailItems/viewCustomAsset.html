@@ -1,0 +1,52 @@
+<div class="list card">
+  <div class="item item-divider">
+    <div class="row row-center row-no-padding">
+      <div class="col col-50 text-left">
+        <span>资产信息</span>
+      </div>
+      <div class="col col-50 text-right">
+        <span></span>
+      </div>
+    </div>
+  </div>
+  <div class="item item-light item-body">
+    <div class="row row-center row-no-padding">
+      <table cellpadding="0" cellspacing="0" class="grid-stable" style="width:100% ;">
+        <tr>
+          <td class="grid-stable-td">
+            <table style="width: 100%;">
+              <tr>
+                <td width="100" class="grid-stable-right-td center">资产名称</td>
+                <td width="200" class="grid-stable-right-td center" ng-bind="customerAssetInfo['资产名称']">&nbsp;</td>
+                <td width="100" class="grid-stable-right-td center">押品编号</td>
+                <td width="200" class="grid-stable-right-td center" ng-bind="customerAssetInfo['押品编号']">&nbsp;</td>
+                <td width="100" class="grid-stable-right-td center">资产状况</td>
+                <td>&nbsp;<span ng-bind="customerAssetInfo['资产状况']"></span></td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td class="grid-stable-td">
+            <table>
+              <tr>
+                <td width="100" class="grid-stable-right-td center">预评估价值</td>
+                <td width="100" class="grid-stable-right-td center" ng-bind="customerAssetInfo['预评估价值']">&nbsp;</td>
+                <td width="100" class="grid-stable-right-td center">评估到期日期</td>
+                <td width="100" class="grid-stable-right-td center" ng-bind="customerAssetInfo['评估到期日期']">&nbsp;</td>
+                <td width="100" class="grid-stable-right-td center">资产类型</td>
+                <td width="100" class="grid-stable-right-td center" ng-bind="customerAssetInfo['资产类型']">&nbsp;</td>
+                <td width="100" class="grid-stable-right-td center">首次评估日期</td>
+                <td width="100" class="grid-stable-right-td center" ng-bind="customerAssetInfo['首次评估日期']">&nbsp;</td>
+                <td width="100" class="grid-stable-right-td center">正式评估日期</td>
+                <td width="100" class="grid-stable-right-td center" ng-bind="customerAssetInfo['正式评估日期']">&nbsp;</td>
+                <td width="100" class="grid-stable-right-td center">最新评估日期</td>
+                <td>&nbsp;<span ng-bind="customerAssetInfo['最新评估日期']"></span></td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>

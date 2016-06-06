@@ -1,0 +1,132 @@
+<ion-view view-title="客户明细" class="section-background background-fixed">
+
+
+    <style>
+
+        .grid-stable {
+            border-collapse: collapse;
+            border: none;
+            width: 200px;
+            font-size: 12px;
+            color: black;
+        }
+
+        .grid-stable .grid-stable-td {
+            border: solid #000 1px;
+        }
+
+        .grid-stable .grid-stable-right-td {
+            border-right: solid #000 1px;
+        }
+
+        .grid-stable .grid-stable-bottom-td {
+            border-bottom: solid #000 1px;
+        }
+
+        .grid-stable .center {
+            text-align: center;
+        }
+
+        .grid-stable .title {
+            background-color: #c8c8c8;
+        }
+
+        .grid-stable table {
+            border-collapse: collapse;
+            border-spacing: 0;
+            padd: expression(this.cellPadding = 0);
+        }
+
+        .grid-stable table tr {
+            height: 30px;
+        }
+
+        .grid-stable table td {
+            display: table-cell;
+            vertical-align: middle;
+        }
+    </style>
+
+    <div class="tabs-striped tabs-top tabs-background-light tabs-color-chinapost">
+        <div class="tabs" style="border:0;">
+            <a class="tab-item active" ng-class="{'active':0==tabsFlag}" ng-click="tabsFlag=0">
+                基本信息
+            </a>
+            <a class="tab-item" ng-class="{'active':1==tabsFlag}" ng-click="tabsFlag=1">
+                贷款信息
+            </a>
+            <a class="tab-item" ng-class="{'active':2==tabsFlag}" ng-click="tabsFlag=2">
+                额度信息
+            </a>
+            <a class="tab-item" ng-class="{'active':3==tabsFlag}" ng-click="tabsFlag=3">
+                资产信息
+            </a>
+            <a class="tab-item" ng-class="{'active':4==tabsFlag}" ng-click="tabsFlag=4">
+                抵押物信息
+            </a>
+        </div>
+    </div>
+
+    <ion-slide-box class="grey-view" show-pager="false" on-slide-changed="tabsSlideChanged($index)">
+        <ion-slide style="height: 100vh;">
+
+            <ion-content class="has-subheader" scrollbar-y="false" scrollbar-x="false" direction="y">
+
+                <div ng-repeat="customerInfo in customerInformation">
+                    <div ng-if="reportsList.cus_id==customerInfo.cus_id"
+                         ng-include="'modules/loaninspection/templates/customDetailItems/viewCustomBase.html'"></div>
+                </div>
+
+                <div class="padding"></div>
+            </ion-content>
+
+        </ion-slide>
+        <ion-slide style="height: 100vh;">
+
+            <ion-content class="has-subheader" scrollbar-y="false" scrollbar-x="false" direction="y">
+                <div ng-repeat="loanInfo in loanInformation">
+                    <div ng-if="reportsList.cus_id==loanInfo.cus_id"
+                         ng-include="'modules/loaninspection/templates/customDetailItems/viewCustomLoan.html'"></div>
+                </div>
+                <div class="padding"></div>
+            </ion-content>
+
+        </ion-slide>
+        <ion-slide style="height: 100vh;">
+
+            <ion-content class="has-subheader" scrollbar-y="false" scrollbar-x="false" direction="y">
+                <div ng-repeat="customerCreditInfo in customerCreditInformation">
+                    <div ng-if="reportsList.cus_id==customerCreditInfo.cus_id"
+                         ng-include="'modules/loaninspection/templates/customDetailItems/viewCustomBase.html'"></div>
+                </div>
+                <div class="padding"></div>
+            </ion-content>
+
+        </ion-slide>
+        <ion-slide style="height: 100vh;">
+
+            <ion-content class="has-subheader" scrollbar-y="false" scrollbar-x="false" direction="y">
+                <div ng-repeat="customerAssetInfo in customerAssetInformation">
+                    <div ng-if="reportsList.cus_id==customerAssetInfo.cus_id"
+                         ng-include="'modules/loaninspection/templates/customDetailItems/viewCustomAsset.html'"></div>
+                </div>
+                <div class="padding"></div>
+            </ion-content>
+
+        </ion-slide>
+
+        <ion-slide style="height: 100vh;">
+
+            <ion-content class="has-subheader" scrollbar-y="false" scrollbar-x="false" direction="y">
+                <div ng-repeat="customerSecurityInfor in customerSecurityInformation">
+                    <div ng-if="reportsList.cus_id==customerSecurityInfor.cus_id"
+                         ng-include="'modules/loaninspection/templates/customDetailItems/viewCustomSercuity.html'"></div>
+                </div>
+                <div class="padding"></div>
+            </ion-content>
+
+        </ion-slide>
+    </ion-slide-box>
+
+
+</ion-view>
