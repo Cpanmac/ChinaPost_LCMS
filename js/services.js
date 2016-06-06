@@ -275,7 +275,7 @@ angular.module('starter.services', [])
 
                 if (ISDebugConstant) {
 
-                    $http.post(getExternalRootDirectory() + "/" + CheckDirectoryConstant.ROOT + "/" + username + "/" + CheckFileConstant.DATA)
+                    $http.get(getExternalRootDirectory() + "/" + CheckDirectoryConstant.ROOT + "/" + username + "/" + CheckFileConstant.DATA)
                         .success(function (success) {
                             deferred.resolve(success);
                         })
