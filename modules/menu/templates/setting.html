@@ -1,0 +1,18 @@
+<ion-view view-title="个人设置" class="background-fixed section-background">
+    <ion-content>
+
+        <div class="card">
+
+            <div class="item item-divider">
+                系统设置
+            </div>
+
+            <ion-toggle ng-change="changeIsAutoTemporary();" ng-model="systemInfoSetting.isAutoTemporary"
+                        ng-checked="systemInfoSetting.isAutoTemporary">
+                自动暂存
+            </ion-toggle>
+
+        </div>
+
+    </ion-content>
+</ion-view>

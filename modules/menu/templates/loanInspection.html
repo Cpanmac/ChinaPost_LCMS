@@ -1,0 +1,51 @@
+<ion-view view-title="贷后检查">
+    <ion-nav-buttons side="right">
+        <button class="button button-icon button-clear ion-ios-search-strong"
+                ng-click="showSearchLoanListModal()"></button>
+    </ion-nav-buttons>
+    <ion-content class="background-fixed section-background">
+
+
+        <div class="list card" ng-repeat="loanCheckReport in loanCheckReportList|filter:searchCondition">
+            <div class="item item-divider">
+                <div class="row row-center row-no-padding">
+                    <div class="col col-50 text-left">
+                        <span ng-bind="loanCheckReport.last_upd_ts"></span>
+                    </div>
+                    <div class="col col-50 text-right">
+                        <span ng-bind="loanCheckReport.rule_spec"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="item item-light item-body">
+                <div class="row row-center row-no-padding">
+                    <div class="col col-20">姓名：<span ng-bind="loanCheckReport.cus_name"></span></div>
+                    <div class="col col-33">业务类别：<span ng-bind="loanCheckReport.app_op_name"></span></div>
+                    <div class="col">报告类型：<span ng-bind="loanCheckReport.report_type_nm"></span></div>
+                </div>
+            </div>
+            <div class="item item-light" style="padding: 0;">
+                <p class="text-center">
+                    <a ui-sref="menu.editLoaninspection({loanCheckReport:loanCheckReport})"
+                       class="button button-chinapost button-clear">
+                        <i class="ion-ios-compose-outline"></i>
+                        录入报告
+                    </a>
+                    <a ui-sref="menu.viewLoaninspection({loanCheckReport:loanCheckReport})"
+                       class="button button-balanced button-clear">
+                        <i class="ion-ios-eye-outline"></i>
+                        查看报告
+                    </a>
+                    <a ui-sref="menu.viewCustomDetail({loanCheckReport:loanCheckReport})"
+                       class="button button-calm button-clear">
+                        <i class="ion-ios-person-outline"></i>
+                        客户明细
+                    </a>
+                </p>
+            </div>
+
+        </div>
+
+
+    </ion-content>
+</ion-view>

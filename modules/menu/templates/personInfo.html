@@ -1,0 +1,111 @@
+<ion-modal-view class="background-fixed section-background modal full-screen">
+
+    <style scoped>
+        .user-qrcode {
+            position: relative;
+        }
+
+        .user-qrcode .qrcode {
+            height: 131px;
+        }
+
+        .user-qrcode img.qrcode-logo {
+            position: absolute;
+
+            height: 31px;
+            width: 31px;
+
+            top: 50px;
+            bottom: 50px;
+            left: 50px;
+            right: 50px;
+        }
+
+    </style>
+
+    <ion-header-bar class="bar-chinapost">
+        <h1 class="title">个人信息</h1>
+        <div class="buttons">
+            <button class="button button-icon button-clear ion-android-close" ng-click="closePersonInfo()">
+            </button>
+        </div>
+    </ion-header-bar>
+    <ion-content>
+
+
+        <div class="list">
+            <div class="card">
+                <div class="item item-divider item-text-wrap">
+                    个人信息
+                </div>
+
+                <div class="row">
+
+                    <div style="width: auto;">
+                        <a class="item item-light" ng-click="setBarcode();">
+                            <div ng-if="userInfo.qrCode" class="user-qrcode">
+                                <qrcode data="{{userInfo.qrCode}}"
+                                        size="500">
+                                </qrcode>
+                                <img class="qrcode-logo" src="img/icon.png">
+                            </div>
+                            <img ng-if="!!!userInfo.qrCode" style="height: 131px;" src="img/icon.png">
+                        </a>
+                    </div>
+
+                    <div class="col">
+                        <div class="row row-stretch">
+                            <div class="col-50">
+                                <label class="item item-input">
+                                    <div class="input-label input-label-small">
+                                        姓名：
+                                    </div>
+                                    <span class="item-text-wrap" ng-bind="userInfo.user_name"></span>
+                                </label>
+                                <label class="item item-input">
+                                    <div class="input-label input-label-small">
+                                        联系电话：
+                                    </div>
+                                    <span class="item-text-wrap" ng-bind="userInfo.mobile"></span>
+                                </label>
+                                <label class="item item-input">
+                                    <div class="input-label input-label-small">
+                                        组织机构：
+                                    </div>
+                                    <span class="item-text-wrap" ng-bind="userInfo.org_cd"></span>
+                                </label>
+                            </div>
+                            <div class="col-50">
+                                <label class="item item-input">
+                                    <div class="input-label input-label-small">
+                                        性别：
+                                    </div>
+                                    <span class="item-text-wrap">
+                                        <span ng-if="userInfo.sex=='1'">男</span>
+                                        <span ng-if="userInfo.sex=='2'">女</span>
+                                    </span>
+                                </label>
+                                <label class="item item-input">
+                                    <div class="input-label input-label-small">
+                                        电子邮件：
+                                    </div>
+                                    <span class="item-text-wrap" ng-bind="userInfo.email"></span>
+                                </label>
+                                <label class="item item-input">
+                                    <div class="input-label input-label-small">
+                                        员工号：
+                                    </div>
+                                    <span class="item-text-wrap" ng-bind="userInfo.user_cd"></span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+
+    </ion-content>
+</ion-modal-view>

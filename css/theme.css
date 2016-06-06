@@ -1,0 +1,297 @@
+.bar.bar-chinapost {
+    border-color: #00702f;
+    background-color: #28a54c;
+    background-image: linear-gradient(0deg, #00702f, #00702f 50%, transparent 50%);
+    color: #fff;
+}
+
+.bar.bar-chinapost .title {
+    color: #fff;
+}
+
+.bar.bar-chinapost.bar-footer {
+    background-image: linear-gradient(180deg, #00702f, #00702f 50%, transparent 50%);
+}
+
+.bar-chinapost .button {
+    border-color: transparent;
+    background-color: #28a54c;
+    color: #fff;
+}
+
+.bar-chinapost .button:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+.bar-chinapost .button.active, .bar-chinapost .button.activated {
+    background-color: #00702f;
+}
+
+.bar-chinapost .button.button-clear {
+    border-color: transparent;
+    background: none;
+    box-shadow: none;
+    color: #fff;
+    font-size: 17px;
+}
+
+.bar-chinapost .button.button-icon {
+    border-color: transparent;
+    background: none;
+}
+
+.tabs-chinapost > .tabs,
+.tabs.tabs-chinapost {
+    border-color: #00702f;
+    background-color: #28a54c;
+    background-image: linear-gradient(0deg, #00702f, #00702f 50%, transparent 50%);
+    color: #fff;
+}
+
+.tabs-chinapost > .tabs .tab-item .badge,
+.tabs.tabs-chinapost .tab-item .badge {
+    background-color: #fff;
+    color: #28a54c;
+}
+
+.tabs-striped.tabs-chinapost .tabs {
+    background-color: #28a54c;
+}
+
+.tabs-striped.tabs-chinapost .tab-item {
+    color: rgba(255, 255, 255, 0.4);
+    opacity: 1;
+}
+
+.tabs-striped.tabs-chinapost .tab-item .badge {
+    opacity: 0.4;
+}
+
+.tabs-striped.tabs-chinapost .tab-item.tab-item-active, .tabs-striped.tabs-chinapost .tab-item.active, .tabs-striped.tabs-chinapost .tab-item.activated {
+    margin-top: -2px;
+    color: #fff;
+    border-style: solid;
+    border-width: 2px 0 0 0;
+    border-color: #fff;
+}
+
+.tabs-striped.tabs-background-chinapost .tabs {
+    background-color: #28a54c;
+    background-image: none;
+}
+
+.tabs-striped.tabs-color-chinapost .tab-item {
+    color: rgba(40, 165, 76, 0.4);
+    opacity: 1;
+}
+
+.tabs-striped.tabs-color-chinapost .tab-item .badge {
+    opacity: 0.4;
+}
+
+.tabs-striped.tabs-color-chinapost .tab-item.tab-item-active, .tabs-striped.tabs-color-chinapost .tab-item.active, .tabs-striped.tabs-color-chinapost .tab-item.activated {
+    margin-top: -2px;
+    color: #28a54c;
+    border: 0 solid #28a54c;
+    border-top-width: 2px;
+}
+
+.tabs-striped.tabs-color-chinapost .tab-item.tab-item-active .badge, .tabs-striped.tabs-color-chinapost .tab-item.active .badge, .tabs-striped.tabs-color-chinapost .tab-item.activated .badge {
+    top: 2px;
+    opacity: 1;
+}
+
+.tabs-background-chinapost .tabs,
+.tabs-background-chinapost > .tabs {
+    background-color: #28a54c;
+    background-image: linear-gradient(0deg, #00702f, #00702f 50%, transparent 50%);
+    border-color: #00702f;
+}
+
+.tabs-color-chinapost .tab-item {
+    color: rgba(40, 165, 76, 0.4);
+    opacity: 1;
+}
+
+.tabs-color-chinapost .tab-item .badge {
+    opacity: 0.4;
+}
+
+.tabs-color-chinapost .tab-item.tab-item-active, .tabs-color-chinapost .tab-item.active, .tabs-color-chinapost .tab-item.activated {
+    color: #28a54c;
+    border: 0 solid #28a54c;
+}
+
+.tabs-color-chinapost .tab-item.tab-item-active .badge, .tabs-color-chinapost .tab-item.active .badge, .tabs-color-chinapost .tab-item.activated .badge {
+    opacity: 1;
+}
+
+ion-tabs.tabs-color-active-chinapost .tab-item {
+    color: #444;
+}
+
+ion-tabs.tabs-color-active-chinapost .tab-item.tab-item-active, ion-tabs.tabs-color-active-chinapost .tab-item.active, ion-tabs.tabs-color-active-chinapost .tab-item.activated {
+    color: #28a54c;
+}
+
+.tab-item.tab-item-active.tab-item-chinapost,
+.tab-item.active.tab-item-chinapost,
+.tab-item.activated.tab-item-chinapost {
+    color: #28a54c;
+}
+
+.item.item-chinapost {
+    border-color: #00702f;
+    background-color: #28a54c;
+    color: #fff;
+}
+
+.item.active.item-chinapost,
+.item.activated.item-chinapost,
+.item-complex.active .item-content.item-chinapost,
+.item-complex.activated .item-content.item-chinapost,
+.item .item-content.active.item-chinapost,
+.item .item-content.activated.item-chinapost {
+    border-color: #00702f;
+    background-color: #00702f;
+}
+
+.item.active.item-chinapost.item-complex > .item-content,
+.item.activated.item-chinapost.item-complex > .item-content,
+.item-complex.active .item-content.item-chinapost.item-complex > .item-content,
+.item-complex.activated .item-content.item-chinapost.item-complex > .item-content,
+.item .item-content.active.item-chinapost.item-complex > .item-content,
+.item .item-content.activated.item-chinapost.item-complex > .item-content {
+    border-color: #00702f;
+    background-color: #00702f;
+}
+
+.item-complex.item-chinapost > .item-content {
+    border-color: #00702f;
+    background-color: #28a54c;
+    color: #fff;
+}
+
+.item-complex.item-chinapost > .item-content.active, .item-complex.item-chinapost > .item-content:active {
+    border-color: #00702f;
+    background-color: #00702f;
+}
+
+.item-complex.item-chinapost > .item-content.active.item-complex > .item-content, .item-complex.item-chinapost > .item-content:active.item-complex > .item-content {
+    border-color: #00702f;
+    background-color: #00702f;
+}
+
+.tabs .tab-item .badge.badge-chinapost,
+.badge.badge-chinapost {
+    background-color: #28a54c;
+    color: #fff;
+}
+
+.spinner.spinner-chinapost {
+    stroke: #28a54c;
+    fill: #28a54c;
+}
+
+.spinner-spiral.spinner-chinapost .stop2 {
+    stop-color: #28a54c;
+}
+
+.checkbox-chinapost input:before,
+.checkbox-chinapost .checkbox-icon:before {
+    border-color: #28a54c;
+}
+
+.checkbox-chinapost input:checked:before,
+.checkbox-chinapost input:checked + .checkbox-icon:before {
+    background: #28a54c;
+    border-color: #28a54c;
+}
+
+.toggle.toggle-chinapost input:checked + .track {
+    border-color: #28a54c;
+    background-color: #28a54c;
+}
+
+.toggle-small .toggle-chinapost input:checked + .track {
+    background-color: rgba(40, 165, 76, 0.5);
+}
+
+.toggle-small .toggle-chinapost input:checked + .track .handle {
+    background-color: #28a54c;
+}
+
+.range.range-chinapost input::-webkit-slider-thumb:before {
+    background: #28a54c;
+}
+
+.range.range-chinapost input::-ms-fill-lower {
+    background: #28a54c;
+}
+
+.item-select.item-chinapost select {
+    background: #28a54c;
+    color: #fff;
+}
+
+.item-select.item-chinapost select {
+    background: #28a54c;
+    color: #fff;
+}
+
+.item-select.item-chinapost:after, .item-select.item-chinapost .input-label {
+    color: #fff;
+}
+
+.button.button-chinapost {
+    border-color: transparent;
+    background-color: #28a54c;
+    color: #fff;
+}
+
+.button.button-chinapost:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+.button.button-chinapost.active, .button.button-chinapost.activated {
+    background-color: #00702f;
+}
+
+.button.button-chinapost.button-clear {
+    border-color: transparent;
+    background: none;
+    box-shadow: none;
+    color: #28a54c;
+}
+
+.button.button-chinapost.button-icon {
+    border-color: transparent;
+    background: none;
+}
+
+.button.button-chinapost.button-outline {
+    border-color: #28a54c;
+    background: transparent;
+    color: #28a54c;
+}
+
+.button.button-chinapost.button-outline.active, .button.button-chinapost.button-outline.activated {
+    background-color: #28a54c;
+    box-shadow: none;
+    color: #fff;
+}
+
+.chinapost, a.chinapost {
+    color: #28a54c;
+}
+
+.chinapost-bg {
+    background-color: #28a54c;
+}
+
+.chinapost-border {
+    border-color: #00702f;
+}
+

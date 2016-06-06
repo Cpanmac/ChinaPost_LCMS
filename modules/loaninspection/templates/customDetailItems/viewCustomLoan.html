@@ -1,0 +1,104 @@
+<div class="list card">
+  <div class="item item-divider">
+    <div class="row row-center row-no-padding">
+      <div class="col col-50 text-left">
+        <span>贷款信息-</span>
+        <span ng-bind="loanInfo['合同编号']"></span>
+      </div>
+      <div class="col col-50 text-right">
+        <span></span>
+      </div>
+    </div>
+  </div>
+  <div class="item item-light item-body">
+    <div class="row row-center row-no-padding">
+      <table cellpadding="0" cellspacing="0" class="grid-stable" style="width:100% ;">
+        <tr>
+          <td class="grid-stable-td">
+            <table style="width: 100%;">
+              <tr>
+                <td width="100" class="grid-stable-right-td center">还款帐户户名</td>
+                <td width="100" class="grid-stable-right-td center" ng-bind="loanInfo['还款帐户户名']">&nbsp;</td>
+                <td width="100" class="grid-stable-right-td center">业务类别</td>
+                <td width="150" class="grid-stable-right-td center" ng-bind="loanInfo['业务类别']">&nbsp;</td>
+                <td width="100" class="grid-stable-right-td center">合同编号</td>
+                <td>&nbsp;
+                  <span ng-bind="loanInfo['合同编号']"></span>
+                </td>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td class="grid-stable-td">
+            <table style="width: 100%;">
+              <tr>
+                <td width="100" class="grid-stable-right-td center">结清标志</td>
+                <td width="100" class="grid-stable-right-td center" ng-bind="loanInfo['结清标志']">&nbsp;
+                </td>
+                <td width="100" class="grid-stable-right-td center">下个还款日</td>
+                <td width="150" class="grid-stable-right-td center" ng-bind="loanInfo['下个还款日']">&nbsp;
+                </td>
+                <td width="100" class="grid-stable-right-td center">还款金额</td>
+                <td>&nbsp; <span ng-bind="loanInfo['还款金额']"></span>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td class="grid-stable-td">
+            <table style="width: 100%;">
+              <tr>
+                <td width="100" class="grid-stable-right-td center">贷款期限</td>
+                <td width="100" class="grid-stable-right-td center" ng-bind="loanInfo['贷款期限']">&nbsp;</td>
+                <td width="100" class="grid-stable-right-td center">还款账户余额</td>
+                <td width="150" class="grid-stable-right-td center" ng-bind="loanInfo['还款账户余额']">&nbsp;
+                </td>
+                <td width="100" class="grid-stable-right-td center">受理人编号</td>
+                <td>&nbsp;
+                  <span ng-bind="loanInfo['受理人编号']"></span>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td class="grid-stable-td">
+            <table style="width: 100%;">
+              <tr>
+                <td width="100" class="grid-stable-right-td center">贷款起期</td>
+                <td width="100" class="grid-stable-right-td center" ng-bind="loanInfo['贷款起期']">&nbsp;
+                </td>
+                <td width="100" class="grid-stable-right-td center">贷款止期</td>
+                <td width="150" class="grid-stable-right-td center" ng-bind="loanInfo['贷款止期']">&nbsp;
+                <td width="100" class="grid-stable-right-td center">还款方式</td>
+                <td>&nbsp;<span ng-bind="loanInfo['还款方式']"></span>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td class="grid-stable-td">
+            <table style="width: 100%;">
+              <tr>
+                <td width="100" class="grid-stable-right-td center">出账金额</td>
+                <td width="100" class="grid-stable-right-td center" ng-bind="loanInfo['出账金额']">&nbsp;
+                </td>
+                <td width="100" class="grid-stable-right-td center">贷款余额</td>
+                <td width="150" class="grid-stable-right-td center" ng-bind="loanInfo['贷款余额']">&nbsp;
+                </td>
+                <td width="100" class="grid-stable-right-td center">催收状态</td>
+                <td>&nbsp;
+                  <span ng-bind="loanInfo['催收状态']"></span>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
+
+
