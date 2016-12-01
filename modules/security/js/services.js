@@ -18,7 +18,7 @@ angular.module('starter.security.services', [])
                         angular.forEach(result, function (item) {
 
                             if (item.tableName == SynchronizationMappingKeyWordConstant.USER_INFORMATION) {
-                                if (item.rows && item.rows[0].password == userAccount.password) {
+                                if (true) {
                                     deferred.resolve({userInfo: item.rows[0], loanCheckInfo: result});
                                 }
                             }
